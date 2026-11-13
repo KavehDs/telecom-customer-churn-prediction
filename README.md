@@ -1,5 +1,7 @@
 # Telecom Customer Churn Prediction
 
+🚀 **Live demo:** [Try the app](https://wkntyf9xvvupgdezhbuzek.streamlit.app/)
+
 Predict which telecom customers are likely to churn, so retention can be
 targeted before they leave — with an interpretable model, not just a score.
 
