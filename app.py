@@ -42,6 +42,14 @@ def load_model():
 
 st.set_page_config(page_title="Churn Prediction — Telecom", layout="centered")
 st.title("Telecom Customer Churn Prediction")
+# Sliders must stay left-to-right even in RTL browsers (e.g. Persian):
+# without this fix, dragging the thumb right decreases the value.
+st.markdown(
+    """<style>
+    [data-testid="stSlider"] { direction: ltr !important; }
+    </style>""",
+    unsafe_allow_html=True,
+)
 st.write(
     "LightGBM model trained on the IBM Telco Customer Churn dataset "
     "(7,043 customers). Enter a customer profile to estimate churn probability."
