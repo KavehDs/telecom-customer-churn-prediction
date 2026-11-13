@@ -1,0 +1,133 @@
+{
+  "dataset": {
+    "rows": 7043,
+    "columns": 21,
+    "churn_yes": 1869,
+    "churn_no": 5174,
+    "rows_after_cleaning": 7032,
+    "blank_total_charges_dropped": 11
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified": true
+  },
+  "best_model_by_roc_auc": "Logistic Regression",
+  "results": {
+    "Logistic Regression": {
+      "roc_auc": 0.8351,
+      "accuracy": 0.7257,
+      "precision_churn": 0.4901,
+      "recall_churn": 0.7968,
+      "f1_churn": 0.6069,
+      "confusion_matrix": [
+        [
+          723,
+          310
+        ],
+        [
+          76,
+          298
+        ]
+      ]
+    },
+    "XGBoost": {
+      "roc_auc": 0.8302,
+      "accuracy": 0.7349,
+      "precision_churn": 0.5009,
+      "recall_churn": 0.7781,
+      "f1_churn": 0.6094,
+      "confusion_matrix": [
+        [
+          743,
+          290
+        ],
+        [
+          83,
+          291
+        ]
+      ]
+    },
+    "LightGBM": {
+      "roc_auc": 0.8258,
+      "accuracy": 0.752,
+      "precision_churn": 0.5241,
+      "recall_churn": 0.7273,
+      "f1_churn": 0.6092,
+      "confusion_matrix": [
+        [
+          786,
+          247
+        ],
+        [
+          102,
+          272
+        ]
+      ]
+    }
+  },
+  "shap_top_10_lightgbm": [
+    {
+      "feature": "cat__Contract_Month-to-month",
+      "mean_abs_shap": 1.0181
+    },
+    {
+      "feature": "num__tenure",
+      "mean_abs_shap": 0.6612
+    },
+    {
+      "feature": "num__MonthlyCharges",
+      "mean_abs_shap": 0.3948
+    },
+    {
+      "feature": "num__TotalCharges",
+      "mean_abs_shap": 0.283
+    },
+    {
+      "feature": "cat__OnlineSecurity_No",
+      "mean_abs_shap": 0.257
+    },
+    {
+      "feature": "cat__TechSupport_No",
+      "mean_abs_shap": 0.2335
+    },
+    {
+      "feature": "cat__Contract_Two year",
+      "mean_abs_shap": 0.2069
+    },
+    {
+      "feature": "cat__PaymentMethod_Electronic check",
+      "mean_abs_shap": 0.169
+    },
+    {
+      "feature": "cat__MultipleLines_No",
+      "mean_abs_shap": 0.1357
+    },
+    {
+      "feature": "cat__Contract_One year",
+      "mean_abs_shap": 0.1266
+    }
+  ],
+  "shap_top_5": [
+    {
+      "feature": "cat__Contract_Month-to-month",
+      "mean_abs_shap": 1.0181
+    },
+    {
+      "feature": "num__tenure",
+      "mean_abs_shap": 0.6612
+    },
+    {
+      "feature": "num__MonthlyCharges",
+      "mean_abs_shap": 0.3948
+    },
+    {
+      "feature": "num__TotalCharges",
+      "mean_abs_shap": 0.283
+    },
+    {
+      "feature": "cat__OnlineSecurity_No",
+      "mean_abs_shap": 0.257
+    }
+  ]
+}
